@@ -1,0 +1,24 @@
+//printing strong numbers in the given number(indivdival factors of a given number is equl to the given number is called strong number)
+#include <stdio.h>
+
+void main()
+{   
+    int sum=0,count=0,limit;
+    printf("enter the limit:");
+     scanf("%d",&limit);
+     for(int n=1;n<=limit;n++)
+     {
+         for(int i=1;i<n;i++)
+         {
+             if(n%i==0)
+             { sum=sum+i;}
+         }
+         if(n==sum)
+         {
+             count++;
+         }
+         sum=0;
+     }
+     printf("the number of strong numbers in the given range is:%d",count);
+   
+}
